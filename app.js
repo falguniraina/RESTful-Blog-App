@@ -5,13 +5,13 @@ app =              express(),
 bodyParser=        require("body-parser"),
 mongoose =         require("mongoose");
 
-mongoose.connect("mongodb+srv://falguniraina:falguniraina@cluster0.3fl7a.mongodb.net/RESTful Blog App?retryWrites=true&w=majority",{
+mongoose.connect("mongodb+srv://falguniraina:falguniraina@cluster0.3fl7a.mongodb.net/BlogApp?retryWrites=true&w=majority",{
 useNewUrlParser : true,
 useCreateIndex : true
 }).then(()=>{
     console.log("Connected to DB!");
 }).catch(err => {
-    console.log("ERROR",err.message);
+    console.log("ERROR:",err.message);
 });
 app.set("view engine","ejs");
 app.use(express.static("public"));
